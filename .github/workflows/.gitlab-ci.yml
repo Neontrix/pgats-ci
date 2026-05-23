@@ -1,0 +1,22 @@
+# CI de Nível 01 - Disparo Manual através de clique
+
+stages:
+  - test
+
+e2e-tests:
+  stage: test
+  image: node:24
+  before_script:
+    - npm install -g yarn
+    - yarn
+    - yarn playwright install
+  script:
+    - yarn run e2e
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - reports/
+    expire_in: 1 week
+  when: manual

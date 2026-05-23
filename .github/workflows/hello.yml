@@ -1,0 +1,6 @@
+jobs:
+  hello-world:
+    runs-on: self-hosted
+    steps:
+      - name: Mostrar mensagem
+        run: echo "Hello World do runner self-hosted!"

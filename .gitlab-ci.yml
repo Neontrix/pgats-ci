@@ -7,7 +7,6 @@ e2e-tests:
   stage: test
   image: node:24
   before_script:
-    - npm install -g yarn
     - yarn
     - yarn playwright install
   script:

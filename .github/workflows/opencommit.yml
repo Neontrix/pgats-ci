@@ -1,0 +1,17 @@
+name: OpenCommit AI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  generate-commit-message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run OpenCommit
+        run: npx opencommit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

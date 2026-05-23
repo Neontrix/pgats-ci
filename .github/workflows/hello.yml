@@ -1,3 +1,9 @@
+name: Hello Self-Hosted
+
+on:
+  push:        # dispara quando você faz push
+  workflow_dispatch:   # permite rodar manualmente pelo botão "Run workflow"
+
 jobs:
   hello-world:
     runs-on: self-hosted

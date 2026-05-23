@@ -5,7 +5,7 @@ stages:
 
 e2e-tests:
   stage: test
-  image: node:24
+  image: mcr.microsoft.com/playwright:v1.44.0-jammy
   before_script:
     - yarn
     - yarn playwright install
